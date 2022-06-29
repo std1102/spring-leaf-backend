@@ -1,0 +1,77 @@
+29-06-2022 | 22:29:44.505 [main] DEBUG c.s.database.sql.SQLDatabase - Setting up MySQL database
+29-06-2022 | 22:29:44.550 [main] INFO  io.ebean.EbeanVersion - ebean version: 12.1.8
+29-06-2022 | 22:29:44.572 [main] INFO  i.e.config.properties.LoadContext - loaded properties from []
+29-06-2022 | 22:29:44.581 [main] DEBUG i.a.c.s.i.s.c.ClassPathScanner - determining location urls for classpath:com/springleaf/object/entity using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@2a139a55 ...
+29-06-2022 | 22:29:44.582 [main] DEBUG i.a.c.s.i.s.c.ClassPathScanner - scanning URL: jar:file:/D:/Projects/spring-leaf-backend/spring-leaf-backend-1.0-SNAPSHOT-jar-with-dependencies.jar!/com/springleaf/object/entity
+29-06-2022 | 22:29:44.593 [main] DEBUG i.a.c.s.i.s.c.ClassPathScanner - scanning for classes at classpath:com/springleaf/object/entity found 12 resources to check
+29-06-2022 | 22:29:44.616 [main] DEBUG i.e.s.c.bootup.BootupClassPathSearch - Classpath search entities[9] searchTime[35] in packages[[com.springleaf.object.entity]]
+29-06-2022 | 22:29:44.625 [main] INFO  i.e.datasource.pool.ConnectionPool - DataSourcePool [db] autoCommit[false] transIsolation[READ_COMMITTED] min[2] max[50]
+29-06-2022 | 22:29:45.127 [main] INFO  io.ebean.internal.DefaultContainer - DatabasePlatform name:db platform:mysql
+29-06-2022 | 22:29:45.204 [main] DEBUG i.e.server.type.DefaultTypeManager - Registering java.time data types
+29-06-2022 | 22:29:45.228 [main] DEBUG i.e.s.deploy.BeanDescriptorManager - BeanPersistControllers[0] BeanFinders[0] BeanPersistListeners[0] BeanQueryAdapters[0] BeanPostLoaders[0] BeanPostConstructors[0]
+29-06-2022 | 22:29:45.283 [main] ERROR c.s.database.sql.SQLDatabase - Bean class com.springleaf.object.entity.Post is not enhanced? Check packages specified in ebean.mf. If you are running in IDEA or Eclipse check that the enhancement plugin is installed. See https://ebean.io/docs/trouble-shooting#not-enhanced
+29-06-2022 | 22:29:45.356 [main] DEBUG spark.route.Routes - Adds route: before, /spring-leaf/*, spark.FilterImpl$1@464a4442
+29-06-2022 | 22:29:45.429 [Thread-2] INFO  s.e.jetty.EmbeddedJettyServer - == Spark has ignited ...
+29-06-2022 | 22:29:45.429 [Thread-2] INFO  s.e.jetty.EmbeddedJettyServer - >> Listening on 0.0.0.0:3357
+29-06-2022 | 22:29:45.432 [main] INFO  org.reflections.Reflections - Reflections took 68 ms to scan 1 urls, producing 4 keys and 20 values
+29-06-2022 | 22:29:45.459 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/login, spark.RouteImpl$1@29fc1a2b
+29-06-2022 | 22:29:45.460 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/register, spark.RouteImpl$1@4d0b0fd4
+29-06-2022 | 22:29:45.460 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/test, spark.RouteImpl$1@6c37bd27
+29-06-2022 | 22:29:45.461 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/get-posts, spark.RouteImpl$1@25d3cfc8
+29-06-2022 | 22:29:45.461 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/change-info, spark.RouteImpl$1@30331109
+29-06-2022 | 22:29:45.461 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/create-post, spark.RouteImpl$1@2571066a
+29-06-2022 | 22:29:45.461 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/user/logout, spark.RouteImpl$1@74fe5966
+29-06-2022 | 22:29:45.462 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/change-password, spark.RouteImpl$1@4fe875be
+29-06-2022 | 22:29:45.462 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/test, spark.RouteImpl$1@677b8e13
+29-06-2022 | 22:29:50.429 [qtp1488449942-28] DEBUG io.ebean.Ebean - defaultName:db
+29-06-2022 | 22:29:50.430 [qtp1488449942-28] DEBUG i.a.c.s.i.s.c.ClassPathScanner - determining location urls for classpath: using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@2a139a55 ...
+29-06-2022 | 22:29:50.431 [qtp1488449942-28] DEBUG i.a.c.s.i.s.c.ClassPathScanner - Unable to resolve location classpath:
+29-06-2022 | 22:29:50.431 [qtp1488449942-28] DEBUG i.a.c.s.i.s.c.ClassPathScanner - scanning for classes at classpath: found 0 resources to check
+29-06-2022 | 22:29:50.431 [qtp1488449942-28] DEBUG i.e.s.c.bootup.BootupClassPathSearch - Classpath search entities[0] searchTime[1] in packages[[]]
+29-06-2022 | 22:31:08.877 [main] DEBUG c.s.database.sql.SQLDatabase - Setting up MySQL database
+29-06-2022 | 22:31:08.951 [main] INFO  io.ebean.EbeanVersion - ebean version: 12.1.8
+29-06-2022 | 22:31:09.058 [main] INFO  i.e.config.properties.LoadContext - loaded properties from []
+29-06-2022 | 22:31:09.074 [main] DEBUG i.a.c.s.i.s.c.ClassPathScanner - determining location urls for classpath:com/springleaf/object/entity using ClassLoader sun.misc.Launcher$AppClassLoader@18b4aac2 ...
+29-06-2022 | 22:31:09.074 [main] DEBUG i.a.c.s.i.s.c.ClassPathScanner - scanning URL: file:/D:/Projects/spring-leaf-backend/target/classes/com/springleaf/object/entity
+29-06-2022 | 22:31:09.076 [main] DEBUG i.a.c.s.i.s.c.FileSystemClassPathLocationScanner - Scanning starting at classpath root in filesystem: D:\Projects\spring-leaf-backend\target\classes\
+29-06-2022 | 22:31:09.076 [main] DEBUG i.a.c.s.i.s.c.FileSystemClassPathLocationScanner - Scanning for resources in path: D:\Projects\spring-leaf-backend\target\classes\com\springleaf\object\entity (com/springleaf/object/entity)
+29-06-2022 | 22:31:09.077 [main] DEBUG i.a.c.s.i.s.c.FileSystemClassPathLocationScanner - Scanning for resources in path: D:\Projects\spring-leaf-backend\target\classes\com\springleaf\object\entity\types (com/springleaf/object/entity)
+29-06-2022 | 22:31:09.078 [main] DEBUG i.a.c.s.i.s.c.ClassPathScanner - scanning for classes at classpath:com/springleaf/object/entity found 12 resources to check
+29-06-2022 | 22:31:09.137 [main] DEBUG i.e.s.c.bootup.BootupClassPathSearch - Classpath search entities[9] searchTime[64] in packages[[com.springleaf.object.entity]]
+29-06-2022 | 22:31:09.198 [main] INFO  i.e.datasource.pool.ConnectionPool - DataSourcePool [db] autoCommit[false] transIsolation[READ_COMMITTED] min[2] max[50]
+29-06-2022 | 22:31:10.075 [main] INFO  io.ebean.internal.DefaultContainer - DatabasePlatform name:db platform:mysql
+29-06-2022 | 22:31:10.250 [main] DEBUG i.e.server.type.DefaultTypeManager - Registering java.time data types
+29-06-2022 | 22:31:10.298 [main] DEBUG i.e.s.core.InternalConfigXmlRead - Classpath search mappings[0] searchTime[0]
+29-06-2022 | 22:31:10.331 [main] DEBUG i.e.s.deploy.BeanDescriptorManager - BeanPersistControllers[0] BeanFinders[0] BeanPersistListeners[0] BeanQueryAdapters[0] BeanPostLoaders[0] BeanPostConstructors[0]
+29-06-2022 | 22:31:10.512 [main] DEBUG i.e.s.deploy.BeanDescriptorManager - Entities[9]
+29-06-2022 | 22:31:10.552 [main] DEBUG i.e.dbmigration.DbOffline - reset
+29-06-2022 | 22:31:10.668 [main] DEBUG spark.route.Routes - Adds route: before, /spring-leaf/*, spark.FilterImpl$1@669513d8
+29-06-2022 | 22:31:10.760 [Thread-3] INFO  s.e.jetty.EmbeddedJettyServer - == Spark has ignited ...
+29-06-2022 | 22:31:10.760 [Thread-3] INFO  s.e.jetty.EmbeddedJettyServer - >> Listening on 0.0.0.0:3357
+29-06-2022 | 22:31:10.835 [main] INFO  org.reflections.Reflections - Reflections took 133 ms to scan 1 urls, producing 4 keys and 20 values
+29-06-2022 | 22:31:10.878 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/login, spark.RouteImpl$1@512d92b
+29-06-2022 | 22:31:10.878 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/register, spark.RouteImpl$1@62c5bbdc
+29-06-2022 | 22:31:10.879 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/test, spark.RouteImpl$1@1bc53649
+29-06-2022 | 22:31:10.879 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/get-posts, spark.RouteImpl$1@88d6f9b
+29-06-2022 | 22:31:10.879 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/change-info, spark.RouteImpl$1@47d93e0d
+29-06-2022 | 22:31:10.879 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/create-post, spark.RouteImpl$1@475b7792
+29-06-2022 | 22:31:10.879 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/user/logout, spark.RouteImpl$1@751e664e
+29-06-2022 | 22:31:10.879 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/change-password, spark.RouteImpl$1@160c3ec1
+29-06-2022 | 22:31:10.879 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/test, spark.RouteImpl$1@182b435b
+29-06-2022 | 22:31:13.480 [qtp2092845078-24] DEBUG io.ebean.SQL - txn[1001] insert into user (first_name, last_name, dob, email, biography, status, active, last_change_password, login_user_id) values (?,?,?,?,?,?,?,?,?); -- bind(Lu,njkljkl,Fri Feb 11 00:00:00 ICT 2000,luyendong1102@gmail.com,null,INIT,true,null,null)
+29-06-2022 | 22:31:13.499 [qtp2092845078-24] DEBUG io.ebean.SUM - txn[1001] Inserted [User] [7]
+29-06-2022 | 22:31:13.504 [qtp2092845078-24] DEBUG io.ebean.SQL - txn[1001] delete from user_role where user_id = ?
+29-06-2022 | 22:31:13.507 [qtp2092845078-24] DEBUG io.ebean.SQL - txn[1001]  -- bind(7)
+29-06-2022 | 22:31:13.507 [qtp2092845078-24] DEBUG io.ebean.SQL - txn[1001] insert into user_role (user_id, role_id) values (?, ?)
+29-06-2022 | 22:31:13.507 [qtp2092845078-24] DEBUG io.ebean.SQL - txn[1001]  -- bind(7, 1)
+29-06-2022 | 22:31:13.563 [qtp2092845078-24] DEBUG io.ebean.SQL - txn[1001] update user set login_user_id = ? where id = ?; -- bind(null, 7) rows(1)
+29-06-2022 | 22:31:13.572 [qtp2092845078-24] DEBUG io.ebean.TXN - txn[1001] Commit
+29-06-2022 | 22:31:13.574 [qtp2092845078-24] DEBUG com.springleaf.context.Context - Request take 449 ms to handle
+29-06-2022 | 22:32:43.324 [Thread-1] DEBUG i.e.server.lib.ShutdownManager - Shutting down
+29-06-2022 | 22:32:43.324 [Thread-1] DEBUG i.e.server.core.DefaultServer - Shutting down instance:db
+29-06-2022 | 22:32:43.324 [Thread-1] DEBUG i.e.server.lib.DaemonExecutorService - DaemonExecutorService[ebean-db] shutting down...
+29-06-2022 | 22:32:43.324 [Thread-1] DEBUG i.e.s.lib.DaemonScheduleThreadPool - DaemonScheduleThreadPool ebean-db-periodic- shutting down...
+29-06-2022 | 22:32:43.325 [Thread-1] DEBUG i.e.d.pool.PooledConnectionQueue - DataSourcePool [db] shutdown min[2] max[50] free[2] busy[0] waiting[0] highWaterMark[1] waitCount[0] hitCount[6] - Statistics count[6] errors[0] totalMicros[488111] hwmMicros[443669] avgMicros[81351]
+29-06-2022 | 22:32:43.326 [Thread-1] DEBUG i.e.d.pool.FreeConnectionBuffer - ... closing all 2 connections from the free list with logErrors: true
+29-06-2022 | 22:32:43.326 [Thread-1] DEBUG i.e.datasource.pool.PooledConnection - Closing Connection[db1] slot[5] reason[null] stats: count[6] errors[0] totalMicros[488111] hwmMicros[443669] avgMicros[81351] , pstmtStats: size[3] max[20] hits[0] miss[3] hitRatio[0] removes[0] 
+29-06-2022 | 22:32:43.334 [Thread-1] DEBUG i.e.datasource.pool.PooledConnection - Closing Connection[db0] slot[0] reason[null] stats: count[0] errors[0] totalMicros[0] hwmMicros[0] avgMicros[0] , pstmtStats: size[0] max[20] hits[0] miss[0] hitRatio[0] removes[0] 

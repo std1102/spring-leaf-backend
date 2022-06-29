@@ -1,0 +1,35 @@
+29-06-2022 | 22:55:34.914 [main] DEBUG c.s.database.sql.SQLDatabase - Setting up MySQL database
+29-06-2022 | 22:55:34.945 [main] INFO  io.ebean.EbeanVersion - ebean version: 12.1.8
+29-06-2022 | 22:55:34.977 [main] INFO  i.e.config.properties.LoadContext - loaded properties from []
+29-06-2022 | 22:55:34.977 [main] DEBUG i.a.c.s.i.s.c.ClassPathScanner - determining location urls for classpath:com/springleaf/object/entity using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@2a139a55 ...
+29-06-2022 | 22:55:34.977 [main] DEBUG i.a.c.s.i.s.c.ClassPathScanner - scanning URL: jar:file:/D:/Projects/spring-leaf-backend/target/spring-leaf-backend-1.0-SNAPSHOT-jar-with-dependencies.jar!/com/springleaf/object/entity
+29-06-2022 | 22:55:34.992 [main] DEBUG i.a.c.s.i.s.c.ClassPathScanner - scanning for classes at classpath:com/springleaf/object/entity found 12 resources to check
+29-06-2022 | 22:55:35.023 [main] DEBUG i.e.s.c.bootup.BootupClassPathSearch - Classpath search entities[9] searchTime[46] in packages[[com.springleaf.object.entity]]
+29-06-2022 | 22:55:35.023 [main] INFO  i.e.datasource.pool.ConnectionPool - DataSourcePool [db] autoCommit[false] transIsolation[READ_COMMITTED] min[2] max[50]
+29-06-2022 | 22:55:35.430 [main] INFO  io.ebean.internal.DefaultContainer - DatabasePlatform name:db platform:mysql
+29-06-2022 | 22:55:35.508 [main] DEBUG i.e.server.type.DefaultTypeManager - Registering java.time data types
+29-06-2022 | 22:55:35.524 [main] DEBUG i.e.s.deploy.BeanDescriptorManager - BeanPersistControllers[0] BeanFinders[0] BeanPersistListeners[0] BeanQueryAdapters[0] BeanPostLoaders[0] BeanPostConstructors[0]
+29-06-2022 | 22:55:35.617 [main] DEBUG i.e.s.deploy.BeanDescriptorManager - Entities[9]
+29-06-2022 | 22:55:35.633 [main] DEBUG i.e.dbmigration.DbOffline - reset
+29-06-2022 | 22:55:35.711 [main] DEBUG spark.route.Routes - Adds route: before, /spring-leaf/*, spark.FilterImpl$1@78faea5f
+29-06-2022 | 22:55:35.789 [Thread-2] INFO  s.e.jetty.EmbeddedJettyServer - == Spark has ignited ...
+29-06-2022 | 22:55:35.789 [Thread-2] INFO  s.e.jetty.EmbeddedJettyServer - >> Listening on 0.0.0.0:3357
+29-06-2022 | 22:55:35.789 [main] INFO  org.reflections.Reflections - Reflections took 64 ms to scan 1 urls, producing 5 keys and 26 values
+29-06-2022 | 22:55:35.816 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/login, spark.RouteImpl$1@971e903
+29-06-2022 | 22:55:35.816 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/register, spark.RouteImpl$1@35636217
+29-06-2022 | 22:55:35.816 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/test, spark.RouteImpl$1@3e4f80cb
+29-06-2022 | 22:55:35.816 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/get-posts, spark.RouteImpl$1@38704ff0
+29-06-2022 | 22:55:35.816 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/change-info, spark.RouteImpl$1@16ade133
+29-06-2022 | 22:55:35.816 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/create-post, spark.RouteImpl$1@4e61e4c2
+29-06-2022 | 22:55:35.816 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/user/logout, spark.RouteImpl$1@c6a6c1d
+29-06-2022 | 22:55:35.816 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/change-password, spark.RouteImpl$1@36dfbdaf
+29-06-2022 | 22:55:35.816 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/test, spark.RouteImpl$1@4f82663e
+29-06-2022 | 22:55:57.418 [qtp291774287-29] DEBUG io.ebean.SQL - txn[1001] insert into user (first_name, last_name, dob, email, biography, status, active, last_change_password, login_user_id) values (?,?,?,?,?,?,?,?,?); -- bind(Lu,njkljkl,Fri Feb 11 00:00:00 ICT 2000,luyendong1102@gmail.com,null,INIT,true,null,null)
+29-06-2022 | 22:55:57.437 [qtp291774287-29] DEBUG io.ebean.SUM - txn[1001] Inserted [User] [8]
+29-06-2022 | 22:55:57.440 [qtp291774287-29] DEBUG io.ebean.SQL - txn[1001] delete from user_role where user_id = ?
+29-06-2022 | 22:55:57.442 [qtp291774287-29] DEBUG io.ebean.SQL - txn[1001]  -- bind(8)
+29-06-2022 | 22:55:57.442 [qtp291774287-29] DEBUG io.ebean.SQL - txn[1001] insert into user_role (user_id, role_id) values (?, ?)
+29-06-2022 | 22:55:57.443 [qtp291774287-29] DEBUG io.ebean.SQL - txn[1001]  -- bind(8, 1)
+29-06-2022 | 22:55:57.469 [qtp291774287-29] DEBUG io.ebean.SQL - txn[1001] update user set login_user_id = ? where id = ?; -- bind(null, 8) rows(1)
+29-06-2022 | 22:55:57.476 [qtp291774287-29] DEBUG io.ebean.TXN - txn[1001] Commit
+29-06-2022 | 22:55:57.477 [qtp291774287-29] DEBUG com.springleaf.context.Context - Request take 360 ms to handle
