@@ -20,7 +20,6 @@ public class AddPost extends UserContext{
 
     private String ID_SUBJECT = "id_subject";
     private String ID_TOPIC = "id_topic";
-
     private String CONTENT = "content";
 
     @Transactional

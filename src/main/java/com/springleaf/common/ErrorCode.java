@@ -19,7 +19,9 @@ public enum ErrorCode {
     OLD_PASSWORD_NOT_MATCH(15, "Password not match"),
     SAME_PASSWORD(16, "Old password and new password is the same"),
     SUBJECT_NOT_FOUND(17, "Subject not found"),
-    TOPIC_NOT_FOUND(18, "Topic not found");
+    TOPIC_NOT_FOUND(18, "Topic not found"),
+    LINK_EXPIRE(19, "Verify link is expire"),
+    ACTION_DENIED (20, "Action denied");
 
     public final int code;
     public final String desc;

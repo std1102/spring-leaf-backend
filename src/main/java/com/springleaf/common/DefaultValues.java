@@ -5,12 +5,11 @@ import java.util.regex.Pattern;
 
 public interface DefaultValues {
     public static final String[] SYSTEM_CHANNEL = new String[] {"hihihi", "hehehe"};
-
     public static final int RANDOM_STR_LENGTH = 12;
     // TODO expire time
     public static final int SESSION_EXPIRE = 9999999;
-    public static final long CACHE_TIME_ALIVE = 1000 * 60 * 5;
-    public static final long CACHE_RESULT_ALIVE = 1000 * 60 * 10;
+    public static final long CACHE_TIME_ALIVE = 3000;
+    public static final long CACHE_RESULT_ALIVE = 10;
     public static final String SEPARATOR_STR = ";";
     public static final String MAIL_PROTOCOL= "smtp";
     public static final String MAIL_SMTP_HOST= "smtp.gmail.com";
@@ -34,5 +33,8 @@ public interface DefaultValues {
     public static final int REDIS_PORT= 1111;
     public static final int REDIS_POOL_SIZE= 20;
     public static final boolean USE_IM_CACHE = true;
+    public static final int THREAD_POOL = 50;
+    public static final String SUBJECT_CATEGORY = "subject";
+    public static final String SUBJECT_SEPERATOR = "[VOTE]";
 
 }

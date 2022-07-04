@@ -33,4 +33,13 @@ public class Vote extends Model {
 
     @ManyToOne
     Post post;
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Vote) {
+            return this.getUser().getId().equals(((Vote) obj).getUser().getId())
+                    && this.getType().equals(((Vote) obj).getType());
+        }
+        return false;
+    }
 }

@@ -1,11 +1,11 @@
 package com.springleaf.context;
 
 import com.springleaf.annotation.RequestMapping;
-import com.springleaf.common.$;
-import com.springleaf.common.DefaultValues;
-import com.springleaf.common.ErrorCode;
-import com.springleaf.common.RequestType;
+import com.springleaf.common.*;
 import com.springleaf.context.Context;
+import com.springleaf.database.DataCache;
+import com.springleaf.database.DataSourceHandle;
+import com.springleaf.database.imcache.InternalCache;
 import io.ebean.Ebean;
 import io.ebean.annotation.Transactional;
 import com.springleaf.messaging.MailChannel;
@@ -14,9 +14,12 @@ import com.springleaf.object.entity.Login;
 import com.springleaf.object.entity.Role;
 import com.springleaf.object.entity.User;
 import com.springleaf.object.entity.types.UserStatus;
+import lombok.extern.slf4j.Slf4j;
 import org.mindrot.jbcrypt.BCrypt;
 
 import javax.mail.MessagingException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -30,6 +33,7 @@ public class UserRegister extends Context {
     private String DOB = "dob";
     private String USERNAME = "username";
     private String PASSWORD = "password";
+
     @Override
     @Transactional
     protected Object _process(Map<String, Object> map) throws ParseException {
@@ -65,27 +69,37 @@ public class UserRegister extends Context {
         List<Role> roles = new ArrayList<>();
         roles.add(role);
         user.setRoles(roles);
+        user.save();
 
         Login login = new Login();
         login.setUsername(username);
         String hPass = BCrypt.hashpw(password, BCrypt.gensalt(DefaultValues.SALT));
         login.setPassword(hPass);
+        login.setUser(user);
+        login.save();
 
-        user.setLogin(login);
-        user.save();
+        DataCache dataCache = DataSourceHandle.getDataCache();
+        dataCache.put(request_id, user.getId() + "", DefaultValues.CACHE_TIME_ALIVE);
 
         // TODO mail
-        Thread thread = new Thread(() -> {
-            Map<String, String> mailContent = new HashMap<>();
-            mailContent.put("subject", "ahihi");
-            mailContent.put("content", "hihi ahihi con me may");
-            MessageChannel cmail = new MailChannel();
-            try {
-                cmail.send(user, mailContent);
-            } catch (MessagingException e) {
-                throw new RuntimeException(e);
-            }
-        });
+        Thread thread = new Thread(
+                () -> {
+                    Map<String, String> mailContent = new HashMap<>();
+                    mailContent.put("subject", "Verify mail");
+                    try {
+                        mailContent.put("content", InetAddress.getLocalHost().getHostAddress() + "/spring-leaf/verifymail?id=" + request_id);
+                    } catch (UnknownHostException e) {
+                        throw new RuntimeException(e);
+                    }
+                    MessageChannel cmail = new MailChannel();
+                    try {
+                        cmail.send(user, mailContent);
+                    } catch (MessagingException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+        );
+        thread.start();
         result.put("username", username);
         return result();
 

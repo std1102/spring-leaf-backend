@@ -48,6 +48,7 @@ public class MailChannel implements MessageChannel{
             message.setSubject(data.get("subject"));
             message.setText(data.get("content"));
             Transport.send(message);
+            log.debug("Mail sent to " + targetEmail);
         } catch (javax.mail.MessagingException e) {
             throw new MessagingException("Unable to send mail to " + targetEmail, e);
         }

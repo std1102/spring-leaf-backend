@@ -2,6 +2,7 @@ package com.springleaf.database;
 
 import com.springleaf.common.DefaultValues;
 import com.springleaf.database.imcache.InternalCache;
+import com.springleaf.database.imcache.InternalQueue;
 import com.springleaf.database.redis.RedisCache;
 import com.springleaf.database.redis.RedisDatBase;
 import com.springleaf.database.sql.SQLDatabase;
@@ -21,6 +22,10 @@ public class DataSourceHandle {
             return InternalCache.getInstance();
         }
         else return new RedisCache();
+    }
+
+    public static InternalQueue getQueue() {
+        return InternalQueue.getInstance();
     }
 
 }

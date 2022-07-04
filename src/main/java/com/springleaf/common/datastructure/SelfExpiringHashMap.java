@@ -14,7 +14,7 @@ public class SelfExpiringHashMap<K, V> implements SelfExpiringMap<K, V>{
 
     private final Map<K, ExpiringKey<K>> expiringKeys;
 
-    private final DelayQueue<ExpiringKey> delayQueue = new DelayQueue<ExpiringKey>();
+    private final DelayQueue<ExpiringKey> delayQueue = new DelayQueue<>();
 
     private final long maxLifeTimeMillis;
 
