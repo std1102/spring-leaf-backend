@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.Map;
 
 @Slf4j
-@RequestMapping(type = RequestType.GET, path = "/test")
+//@RequestMapping(type = RequestType.GET, path = "/test")
 public class Test extends Context {
 
     @Override

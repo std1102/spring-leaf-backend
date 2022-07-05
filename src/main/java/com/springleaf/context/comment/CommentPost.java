@@ -1,9 +1,10 @@
-package com.springleaf.context.user;
+package com.springleaf.context.comment;
 
 import com.springleaf.annotation.RequestMapping;
 import com.springleaf.common.$;
 import com.springleaf.common.ErrorCode;
 import com.springleaf.common.RequestType;
+import com.springleaf.context.user.UserContext;
 import com.springleaf.object.entity.Comment;
 import com.springleaf.object.entity.Post;
 import io.ebean.Ebean;
@@ -13,8 +14,8 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.Map;
 
-@RequestMapping(path = "/user/comment", type = RequestType.POST)
-public class CommentPost extends UserContext{
+@RequestMapping(path = "/comment/add", type = RequestType.POST)
+public class CommentPost extends UserContext {
 
     private final String POST_ID = "post_id";
     private final String PARRENT_ID = "parrent_id";
@@ -27,7 +28,7 @@ public class CommentPost extends UserContext{
         if ($.isMultipleEmpty(post_id, content)) {
             return error(ErrorCode.MISSING_REQUIRE_PROPERTIES);
         }
-        Post post = Ebean.find(Post.class).where().eq("id", post_id).findOne();
+        Post post = Ebean.find(Post.class).where().eq("id", post_id).and().eq("active", true).findOne();
         if (post == null) {
             return error(ErrorCode.POST_NOT_FOUND);
         }

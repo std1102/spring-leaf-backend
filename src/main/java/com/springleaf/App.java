@@ -13,6 +13,7 @@ import com.springleaf.rest.Router;
 import javafx.geometry.Pos;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.Date;
 import java.util.Map;
 
 /**
@@ -46,8 +47,10 @@ public class App
             DataCache dataCache = DataSourceHandle.getDataCache();
             Map<String, String> cached;
             while (true) {
+                log.debug("Checking new Subject at " + new Date());
                 cached = dataCache.getAllCategory(DefaultValues.SUBJECT_CATEGORY);
                 for (String key : cached.keySet()) {
+                    log.debug(key);
                     Subject subject = $.parse(cached.get(key), Subject.class);
                     if (subject == null || subject.getVotes() == null) {
                         continue;
@@ -68,15 +71,15 @@ public class App
                     if (downvote == 0) {
                         downvote = -1;
                     }
-//                    if ((upvote / downvote) >= 1.5) {
-//                        subject.save();
-//                    }
+                    if ((upvote / downvote) >= 1.5) {
+                        subject.save();
+                    }
                     subject.save();
                     log.debug("Subject " + subject.getName() + " saved");
                 }
                 try {
                     // saving memory
-                    Thread.sleep(DefaultValues.CACHE_TIME_ALIVE - 1000);
+                    Thread.sleep(DefaultValues.CACHE_TIME_ALIVE);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }

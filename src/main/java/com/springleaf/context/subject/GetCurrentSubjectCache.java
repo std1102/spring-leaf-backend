@@ -1,4 +1,4 @@
-package com.springleaf.context.publiccontext;
+package com.springleaf.context.subject;
 
 import com.springleaf.annotation.RequestMapping;
 import com.springleaf.common.$;
@@ -19,7 +19,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-@RequestMapping(path = "/spring-leaf/subject-cached", type = RequestType.GET)
+@RequestMapping(path = "/subject-cached", type = RequestType.GET)
 public class GetCurrentSubjectCache extends Context {
     @Override
     protected Object _process(Map<String, Object> map) throws IOException, ParseException, MessagingException {

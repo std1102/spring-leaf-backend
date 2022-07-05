@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicReference;
 
 @Slf4j
 public class InternalCache implements DataCache {
@@ -18,24 +19,24 @@ public class InternalCache implements DataCache {
     }
 
     private InternalCache() {
-        db = new SelfExpiringHashMap();
+        db.set(new SelfExpiringHashMap());
     }
 
-    private SelfExpiringMap<String, Object> db;
+    private AtomicReference<SelfExpiringMap<String, Object>> db = new AtomicReference<>();
 
     @Override
     public boolean put(String key, String value, long timeAlive) {
-        db.put(key, value, timeAlive);
+        db.get().put(key, value, timeAlive);
         return true;
     }
 
     @Override
     public boolean putCategory(String category, String key, String value, long timeAlive) {
-        Object mapObj = db.get(category);
+        Object mapObj = db.get().get(category);
         if (mapObj == null) {
             SelfExpiringMap<String, String> categoryMap = new SelfExpiringHashMap<>();
             categoryMap.put(key, value, timeAlive);
-            db.put(category, categoryMap);
+            db.get().put(category, categoryMap);
             return true;
         } else if (mapObj instanceof SelfExpiringMap) {
             SelfExpiringMap<String, String> categoryMap = (SelfExpiringMap<String, String>) mapObj;
@@ -49,9 +50,9 @@ public class InternalCache implements DataCache {
 
     @Override
     public boolean putMap(String category, Map<String, String> map, long timeAlive) {
-        Object obj = db.get(category);
+        Object obj = db.get().get(category);
         if (obj == null) {
-            db.put(category, map, timeAlive);
+            db.get().put(category, map, timeAlive);
             return true;
         } else if (obj instanceof Map) {
             map.putAll((Map<? extends String, ? extends String>) obj);
@@ -63,7 +64,7 @@ public class InternalCache implements DataCache {
 
     @Override
     public String get(String key) {
-        Object obj = db.get(key);
+        Object obj = db.get().get(key);
         if (obj == null) {
             return null;
         } else if (obj instanceof Map) {
@@ -75,7 +76,7 @@ public class InternalCache implements DataCache {
 
     @Override
     public Map<String, String> getMap(String category) {
-        Object obj = db.get(category);
+        Object obj = db.get().get(category);
         if (obj == null) {
             return new HashMap<>();
         } else if (obj instanceof Map) {
@@ -94,13 +95,13 @@ public class InternalCache implements DataCache {
 
     @Override
     public boolean delete(String keyOrCategory) {
-        db.remove(keyOrCategory);
+        db.get().remove(keyOrCategory);
         return true;
     }
 
     @Override
     public boolean delete(String category, String key) {
-        Object obj = db.get(category);
+        Object obj = db.get().get(category);
         if (obj == null) {
             return true;
         } else if (obj instanceof Map) {
@@ -114,6 +115,6 @@ public class InternalCache implements DataCache {
 
     @Override
     public long size() {
-        return db.size();
+        return db.get().size();
     }
 }

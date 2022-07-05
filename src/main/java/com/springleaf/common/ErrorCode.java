@@ -21,7 +21,8 @@ public enum ErrorCode {
     SUBJECT_NOT_FOUND(17, "Subject not found"),
     TOPIC_NOT_FOUND(18, "Topic not found"),
     LINK_EXPIRE(19, "Verify link is expire"),
-    ACTION_DENIED (20, "Action denied");
+    ACTION_DENIED (20, "Action denied"),
+    POST_NOT_FOUND(21, "Post not found");
 
     public final int code;
     public final String desc;

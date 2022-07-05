@@ -1,9 +1,10 @@
-package com.springleaf.context.user;
+package com.springleaf.context.post;
 
 import com.springleaf.annotation.RequestMapping;
 import com.springleaf.common.$;
 import com.springleaf.common.ErrorCode;
 import com.springleaf.common.RequestType;
+import com.springleaf.context.user.UserContext;
 import io.ebean.Ebean;
 import io.ebean.annotation.Transactional;
 import com.springleaf.object.entity.Post;
@@ -15,8 +16,8 @@ import java.text.ParseException;
 import java.util.Date;
 import java.util.Map;
 
-@RequestMapping(type = RequestType.POST, path = "/user/create-post")
-public class AddPost extends UserContext{
+@RequestMapping(type = RequestType.POST, path = "/post/create-post")
+public class AddPost extends UserContext {
 
     private String ID_SUBJECT = "id_subject";
     private String ID_TOPIC = "id_topic";

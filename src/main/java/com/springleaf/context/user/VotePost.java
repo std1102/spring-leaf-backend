@@ -19,7 +19,7 @@ import java.text.ParseException;
 import java.util.Iterator;
 import java.util.Map;
 
-@RequestMapping(path = "user/vote-post", type = RequestType.POST)
+@RequestMapping(path = "/user/vote-post", type = RequestType.POST)
 public class VotePost extends UserContext{
 
     private final String POST_ID = "post_id";
@@ -27,12 +27,12 @@ public class VotePost extends UserContext{
 
     @Override
     protected Object _process(Map<String, Object> map) throws IOException, ParseException {
-        long post_id = (long) map.get(POST_ID);
+        long post_id = (int) map.get(POST_ID);
         String vote_type = (String) map.get(VOTE_TYPE);
         if ($.isMultipleEmpty(post_id, vote_type)) {
             return error(ErrorCode.MISSING_REQUIRE_PROPERTIES);
         }
-        Post post = Ebean.find(Post.class).where().eq("id", post_id).findOne();
+        Post post = Ebean.find(Post.class).where().eq("id", post_id).and().eq("active", true).findOne();
         if (post == null) {
             return error(ErrorCode.ACTION_DENIED);
         }

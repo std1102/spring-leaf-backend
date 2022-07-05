@@ -1,9 +1,10 @@
-package com.springleaf.context.user;
+package com.springleaf.context.topic;
 
 import com.springleaf.annotation.RequestMapping;
 import com.springleaf.common.$;
 import com.springleaf.common.ErrorCode;
 import com.springleaf.common.RequestType;
+import com.springleaf.context.user.UserContext;
 import com.springleaf.object.entity.Post;
 import com.springleaf.object.entity.Subject;
 import com.springleaf.object.entity.Topic;
@@ -17,7 +18,7 @@ import java.util.Date;
 import java.util.Map;
 
 @RequestMapping(path = "/topic/add", type = RequestType.POST)
-public class AddTopic extends UserContext{
+public class AddTopic extends UserContext {
     private String NAME = "name";
     private String SUBJECT_ID = "subject_id";
 

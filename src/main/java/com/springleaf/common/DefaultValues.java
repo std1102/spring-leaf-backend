@@ -8,7 +8,7 @@ public interface DefaultValues {
     public static final int RANDOM_STR_LENGTH = 12;
     // TODO expire time
     public static final int SESSION_EXPIRE = 9999999;
-    public static final long CACHE_TIME_ALIVE = 3000;
+    public static final long CACHE_TIME_ALIVE = 20000;
     public static final long CACHE_RESULT_ALIVE = 10;
     public static final String SEPARATOR_STR = ";";
     public static final String MAIL_PROTOCOL= "smtp";
