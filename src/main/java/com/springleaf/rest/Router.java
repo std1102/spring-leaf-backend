@@ -3,6 +3,7 @@ package com.springleaf.rest;
 import javax.servlet.MultipartConfigElement;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.InetAddress;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -36,7 +37,6 @@ public class Router {
             log.debug("CORS is enable");
             options("/*",             //enable cors
                     (request, response) -> {
-//                        response.header("Access-Control-Allow-Origin", "*");
                         String accessControlRequestHeaders = request
                                 .headers("Access-Control-Request-Headers");
                         if (accessControlRequestHeaders != null) {
@@ -51,18 +51,11 @@ public class Router {
                         }
                         return "OKE";
                     });
-            before("/*", ((request, response) -> {
+            before("/*", (request, response) -> {
+//                response.header("Access-Control-Allow-Origin", InetAddress.getLocalHost().getHostAddress());
                 response.header("Access-Control-Allow-Origin", "*");
-            }));
+            });
         }
-//        else {
-//            after((request, response) -> {
-//                response.header("Access-Control-Allow-Origin", "*");
-//                response.header("Access-Control-Request-Headers", "Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
-//                response.header("Access-Control-Expose-Headers", "Access-Control-Allow-Origin, Access-Control-Allow-Credentials");
-//                response.header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT, PATCH, HEAD");
-//            });
-//        }
         initRoute();
     }
     public static void initRoute() throws InstantiationException, IllegalAccessException {
