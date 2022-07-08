@@ -45,20 +45,20 @@ public class UserRegister extends Context {
         String last_name = (String) map.get(LAST_NAME);
 
         // validate
-        if ($.isMultipleEmpty(email, first_name, last_name, dob, username, password)) {
+        if ($.isMultipleEmpty(email, first_name, last_name, username, password)) {
             return error(ErrorCode.MISSING_REQUIRE_PROPERTIES);
         }
         if (!DefaultValues.MAIL_PATTERN.matcher(email).matches()) {
             return error(ErrorCode.MISSING_REQUIRE_PROPERTIES);
         }
-        if (!DefaultValues.DATE_UPLOAD_PATTERN.matcher(dob).matches()) {
-            return error(ErrorCode.MISSING_REQUIRE_PROPERTIES);
-        }
+//        if (!DefaultValues.DATE_UPLOAD_PATTERN.matcher(dob).matches()) {
+//            return error(ErrorCode.MISSING_REQUIRE_PROPERTIES);
+//        }
 
         User user = new User();
         user.setActive(true);
-        Date actualDob = new SimpleDateFormat("yyyy-MM-dd").parse(dob);
-        user.setDob(actualDob);
+//        Date actualDob = new SimpleDateFormat("yyyy-MM-dd").parse(dob);
+        user.setDob(new Date());
         user.setEmail(email);
         user.setFirst_name(first_name);
         user.setLast_name(last_name);

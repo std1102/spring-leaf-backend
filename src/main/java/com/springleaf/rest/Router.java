@@ -16,6 +16,7 @@ import com.springleaf.context.Context;
 import lombok.extern.slf4j.Slf4j;
 import org.checkerframework.framework.qual.SubtypeOf;
 import org.reflections.Reflections;
+import spark.Filter;
 import spark.Request;
 import spark.Spark;
 import static spark.Spark.*;
@@ -30,26 +31,35 @@ public class Router {
         System.setProperty("org.eclipse.jetty.LEVEL", "OFF");
         port(Integer.parseInt(Config.getProperty(Config.SYSTEM_PORT)));
         Spark.init();
-        if (Boolean.getBoolean(Config.getProperty(Config.ENABLE_CORS))) {
-            options("/*",             //enable cors
-                    (request, response) -> {
-                        response.header("Access-Control-Allow-Origin", "*");
-                        String accessControlRequestHeaders = request
-                                .headers("Access-Control-Request-Headers");
-                        if (accessControlRequestHeaders != null) {
-                            response.header("Access-Control-Allow-Headers",
-                                    accessControlRequestHeaders);
-                        }
-                        String accessControlRequestMethod = request
-                                .headers("Access-Control-Request-Method");
-                        if (accessControlRequestMethod != null) {
-                            response.header("Access-Control-Allow-Methods",
-                                    accessControlRequestMethod);
-                        }
-
-                        return "OK";
-                    });
-        }
+//        boolean enableCors = Boolean.parseBoolean(Config.getProperty(Config.ENABLE_CORS));
+//        if (enableCors) {
+//            log.debug("CORS is enable");
+//            options("/*",             //enable cors
+//                    (request, response) -> {
+//                        response.header("Access-Control-Allow-Origin", "*");
+//                        String accessControlRequestHeaders = request
+//                                .headers("Access-Control-Request-Headers");
+//                        if (accessControlRequestHeaders != null) {
+//                            response.header("Access-Control-Allow-Headers",
+//                                    accessControlRequestHeaders);
+//                        }
+//                        String accessControlRequestMethod = request
+//                                .headers("Access-Control-Request-Method");
+//                        if (accessControlRequestMethod != null) {
+//                            response.header("Access-Control-Allow-Methods",
+//                                    accessControlRequestMethod);
+//                        }
+//
+//                        return "OK";
+//                    });
+//        }
+//        else {
+//            after((Filter) (request, response) -> {
+//                response.header("Access-Control-Allow-Origin", "*");
+//                response.header("Access-Control-Request-Headers", "auth");
+//                response.header("Access-Control-Allow-Methods", "*");
+//            });
+//        }
         initRoute();
     }
     public static void initRoute() throws InstantiationException, IllegalAccessException {
