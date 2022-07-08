@@ -962,3 +962,180 @@ java.sql.SQLNonTransientConnectionException: Communications link failure during 
 08-07-2022 | 23:54:15.140 [Thread-1] DEBUG i.e.d.pool.FreeConnectionBuffer - ... closing all 2 connections from the free list with logErrors: true
 08-07-2022 | 23:54:15.141 [Thread-1] DEBUG i.e.datasource.pool.PooledConnection - Closing Connection[db1] slot[6] reason[null] stats: count[7] errors[0] totalMicros[105179] hwmMicros[57152] avgMicros[15025] , pstmtStats: size[2] max[20] hits[1] miss[2] hitRatio[33] removes[0] 
 08-07-2022 | 23:54:15.146 [Thread-1] DEBUG i.e.datasource.pool.PooledConnection - Closing Connection[db0] slot[0] reason[null] stats: count[0] errors[0] totalMicros[0] hwmMicros[0] avgMicros[0] , pstmtStats: size[0] max[20] hits[0] miss[0] hitRatio[0] removes[0] 
+08-07-2022 | 23:55:29.563 [main] DEBUG c.s.database.sql.SQLDatabase - Setting up MySQL database
+08-07-2022 | 23:55:29.630 [main] INFO  io.ebean.EbeanVersion - ebean version: 12.1.8
+08-07-2022 | 23:55:29.734 [main] INFO  i.e.config.properties.LoadContext - loaded properties from []
+08-07-2022 | 23:55:29.749 [main] DEBUG i.a.c.s.i.s.c.ClassPathScanner - determining location urls for classpath:com/springleaf/object/entity using ClassLoader sun.misc.Launcher$AppClassLoader@18b4aac2 ...
+08-07-2022 | 23:55:29.750 [main] DEBUG i.a.c.s.i.s.c.ClassPathScanner - scanning URL: file:/D:/Project/spring-leaf-backend/target/classes/com/springleaf/object/entity
+08-07-2022 | 23:55:29.752 [main] DEBUG i.a.c.s.i.s.c.FileSystemClassPathLocationScanner - Scanning starting at classpath root in filesystem: D:\Project\spring-leaf-backend\target\classes\
+08-07-2022 | 23:55:29.752 [main] DEBUG i.a.c.s.i.s.c.FileSystemClassPathLocationScanner - Scanning for resources in path: D:\Project\spring-leaf-backend\target\classes\com\springleaf\object\entity (com/springleaf/object/entity)
+08-07-2022 | 23:55:29.753 [main] DEBUG i.a.c.s.i.s.c.FileSystemClassPathLocationScanner - Scanning for resources in path: D:\Project\spring-leaf-backend\target\classes\com\springleaf\object\entity\types (com/springleaf/object/entity)
+08-07-2022 | 23:55:29.754 [main] DEBUG i.a.c.s.i.s.c.ClassPathScanner - scanning for classes at classpath:com/springleaf/object/entity found 13 resources to check
+08-07-2022 | 23:55:29.807 [main] DEBUG i.e.s.c.bootup.BootupClassPathSearch - Classpath search entities[9] searchTime[59] in packages[[com.springleaf.object.entity]]
+08-07-2022 | 23:55:29.871 [main] INFO  i.e.datasource.pool.ConnectionPool - DataSourcePool [db] autoCommit[false] transIsolation[READ_COMMITTED] min[2] max[50]
+08-07-2022 | 23:55:30.639 [main] INFO  io.ebean.internal.DefaultContainer - DatabasePlatform name:db platform:mysql
+08-07-2022 | 23:55:30.797 [main] DEBUG i.e.server.type.DefaultTypeManager - Registering java.time data types
+08-07-2022 | 23:55:30.812 [main] DEBUG i.e.s.core.InternalConfigXmlRead - Classpath search mappings[0] searchTime[0]
+08-07-2022 | 23:55:30.834 [main] DEBUG i.e.s.deploy.BeanDescriptorManager - BeanPersistControllers[0] BeanFinders[0] BeanPersistListeners[0] BeanQueryAdapters[0] BeanPostLoaders[0] BeanPostConstructors[0]
+08-07-2022 | 23:55:30.979 [main] DEBUG i.e.s.deploy.BeanDescriptorManager - Entities[9]
+08-07-2022 | 23:55:31.033 [main] DEBUG i.e.dbmigration.DbOffline - reset
+08-07-2022 | 23:55:31.208 [main] DEBUG spark.route.Routes - Adds route: before, /spring-leaf/*, spark.FilterImpl$1@25ddbbbb
+08-07-2022 | 23:55:31.327 [Thread-3] INFO  s.e.jetty.EmbeddedJettyServer - == Spark has ignited ...
+08-07-2022 | 23:55:31.327 [Thread-3] INFO  s.e.jetty.EmbeddedJettyServer - >> Listening on 0.0.0.0:3357
+08-07-2022 | 23:55:31.409 [main] INFO  org.reflections.Reflections - Reflections took 153 ms to scan 1 urls, producing 4 keys and 53 values
+08-07-2022 | 23:55:31.467 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/subject/get, spark.RouteImpl$1@29ad44e3
+08-07-2022 | 23:55:31.467 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/post/get-posts, spark.RouteImpl$1@15bcf458
+08-07-2022 | 23:55:31.468 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/register, spark.RouteImpl$1@43c67247
+08-07-2022 | 23:55:31.468 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/topic/get-post, spark.RouteImpl$1@fac80
+08-07-2022 | 23:55:31.469 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/topic/get-post-by-subject, spark.RouteImpl$1@726386ed
+08-07-2022 | 23:55:31.469 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/verifymail, spark.RouteImpl$1@649f2009
+08-07-2022 | 23:55:31.469 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/subject-cached, spark.RouteImpl$1@14bb2297
+08-07-2022 | 23:55:31.469 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/subject/find, spark.RouteImpl$1@69adf72c
+08-07-2022 | 23:55:31.469 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/login, spark.RouteImpl$1@797501a
+08-07-2022 | 23:55:31.469 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/subject/all, spark.RouteImpl$1@1a15b789
+08-07-2022 | 23:55:31.469 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/post/get, spark.RouteImpl$1@57f791c6
+08-07-2022 | 23:55:31.469 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/user/info, spark.RouteImpl$1@51650883
+08-07-2022 | 23:55:31.470 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/user/logout, spark.RouteImpl$1@6c4f9535
+08-07-2022 | 23:55:31.470 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/post/user-post, spark.RouteImpl$1@5bd1ceca
+08-07-2022 | 23:55:31.470 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/post/create-post, spark.RouteImpl$1@30c31dd7
+08-07-2022 | 23:55:31.471 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/change-password, spark.RouteImpl$1@596df867
+08-07-2022 | 23:55:31.471 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/test, spark.RouteImpl$1@c1fca1e
+08-07-2022 | 23:55:31.472 [main] DEBUG spark.route.Routes - Adds route: delete, /spring-leaf/post/archive, spark.RouteImpl$1@344344fa
+08-07-2022 | 23:55:31.472 [main] DEBUG spark.route.Routes - Adds route: delete, /spring-leaf/comment/delete, spark.RouteImpl$1@2db2cd5
+08-07-2022 | 23:55:31.472 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/change-info, spark.RouteImpl$1@70e659aa
+08-07-2022 | 23:55:31.472 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/vote-post, spark.RouteImpl$1@615f972
+08-07-2022 | 23:55:31.472 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/subject/create, spark.RouteImpl$1@285f09de
+08-07-2022 | 23:55:31.472 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/comment/add, spark.RouteImpl$1@73393584
+08-07-2022 | 23:55:31.473 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/topic/add, spark.RouteImpl$1@31500940
+08-07-2022 | 23:55:31.473 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/subject/vote, spark.RouteImpl$1@1827a871
+08-07-2022 | 23:55:31.484 [Thread-12] DEBUG com.springleaf.App$CacheService - Checking new Subject at Fri Jul 08 23:55:31 ICT 2022
+08-07-2022 | 23:55:51.485 [Thread-12] DEBUG com.springleaf.App$CacheService - Checking new Subject at Fri Jul 08 23:55:51 ICT 2022
+08-07-2022 | 23:56:11.487 [Thread-12] DEBUG com.springleaf.App$CacheService - Checking new Subject at Fri Jul 08 23:56:11 ICT 2022
+08-07-2022 | 23:56:31.500 [Thread-12] DEBUG com.springleaf.App$CacheService - Checking new Subject at Fri Jul 08 23:56:31 ICT 2022
+08-07-2022 | 23:56:51.513 [Thread-12] DEBUG com.springleaf.App$CacheService - Checking new Subject at Fri Jul 08 23:56:51 ICT 2022
+08-07-2022 | 23:57:11.520 [Thread-12] DEBUG com.springleaf.App$CacheService - Checking new Subject at Fri Jul 08 23:57:11 ICT 2022
+08-07-2022 | 23:57:31.533 [Thread-12] DEBUG com.springleaf.App$CacheService - Checking new Subject at Fri Jul 08 23:57:31 ICT 2022
+08-07-2022 | 23:57:51.542 [Thread-12] DEBUG com.springleaf.App$CacheService - Checking new Subject at Fri Jul 08 23:57:51 ICT 2022
+08-07-2022 | 23:58:11.551 [Thread-12] DEBUG com.springleaf.App$CacheService - Checking new Subject at Fri Jul 08 23:58:11 ICT 2022
+08-07-2022 | 23:58:18.967 [Thread-1] DEBUG i.e.server.lib.ShutdownManager - Shutting down
+08-07-2022 | 23:58:18.967 [Thread-1] DEBUG i.e.server.core.DefaultServer - Shutting down instance:db
+08-07-2022 | 23:58:18.968 [Thread-1] DEBUG i.e.server.lib.DaemonExecutorService - DaemonExecutorService[ebean-db] shutting down...
+08-07-2022 | 23:58:18.968 [Thread-1] DEBUG i.e.s.lib.DaemonScheduleThreadPool - DaemonScheduleThreadPool ebean-db-periodic- shutting down...
+08-07-2022 | 23:58:18.969 [Thread-1] DEBUG i.e.d.pool.PooledConnectionQueue - DataSourcePool [db] shutdown min[2] max[50] free[2] busy[0] waiting[0] highWaterMark[1] waitCount[0] hitCount[7] - Statistics count[7] errors[0] totalMicros[30586] hwmMicros[5992] avgMicros[4369]
+08-07-2022 | 23:58:18.969 [Thread-1] DEBUG i.e.d.pool.FreeConnectionBuffer - ... closing all 2 connections from the free list with logErrors: true
+08-07-2022 | 23:58:18.969 [Thread-1] DEBUG i.e.datasource.pool.PooledConnection - Closing Connection[db1] slot[6] reason[null] stats: count[7] errors[0] totalMicros[30586] hwmMicros[5992] avgMicros[4369] , pstmtStats: size[0] max[20] hits[0] miss[0] hitRatio[0] removes[0] 
+08-07-2022 | 23:58:18.974 [Thread-1] DEBUG i.e.datasource.pool.PooledConnection - Closing Connection[db0] slot[0] reason[null] stats: count[0] errors[0] totalMicros[0] hwmMicros[0] avgMicros[0] , pstmtStats: size[0] max[20] hits[0] miss[0] hitRatio[0] removes[0] 
+08-07-2022 | 23:58:22.630 [main] DEBUG c.s.database.sql.SQLDatabase - Setting up MySQL database
+08-07-2022 | 23:58:22.698 [main] INFO  io.ebean.EbeanVersion - ebean version: 12.1.8
+08-07-2022 | 23:58:22.797 [main] INFO  i.e.config.properties.LoadContext - loaded properties from []
+08-07-2022 | 23:58:22.813 [main] DEBUG i.a.c.s.i.s.c.ClassPathScanner - determining location urls for classpath:com/springleaf/object/entity using ClassLoader sun.misc.Launcher$AppClassLoader@18b4aac2 ...
+08-07-2022 | 23:58:22.813 [main] DEBUG i.a.c.s.i.s.c.ClassPathScanner - scanning URL: file:/D:/Project/spring-leaf-backend/target/classes/com/springleaf/object/entity
+08-07-2022 | 23:58:22.815 [main] DEBUG i.a.c.s.i.s.c.FileSystemClassPathLocationScanner - Scanning starting at classpath root in filesystem: D:\Project\spring-leaf-backend\target\classes\
+08-07-2022 | 23:58:22.815 [main] DEBUG i.a.c.s.i.s.c.FileSystemClassPathLocationScanner - Scanning for resources in path: D:\Project\spring-leaf-backend\target\classes\com\springleaf\object\entity (com/springleaf/object/entity)
+08-07-2022 | 23:58:22.816 [main] DEBUG i.a.c.s.i.s.c.FileSystemClassPathLocationScanner - Scanning for resources in path: D:\Project\spring-leaf-backend\target\classes\com\springleaf\object\entity\types (com/springleaf/object/entity)
+08-07-2022 | 23:58:22.817 [main] DEBUG i.a.c.s.i.s.c.ClassPathScanner - scanning for classes at classpath:com/springleaf/object/entity found 13 resources to check
+08-07-2022 | 23:58:22.878 [main] DEBUG i.e.s.c.bootup.BootupClassPathSearch - Classpath search entities[9] searchTime[66] in packages[[com.springleaf.object.entity]]
+08-07-2022 | 23:58:22.937 [main] INFO  i.e.datasource.pool.ConnectionPool - DataSourcePool [db] autoCommit[false] transIsolation[READ_COMMITTED] min[2] max[50]
+08-07-2022 | 23:58:23.704 [main] INFO  io.ebean.internal.DefaultContainer - DatabasePlatform name:db platform:mysql
+08-07-2022 | 23:58:23.856 [main] DEBUG i.e.server.type.DefaultTypeManager - Registering java.time data types
+08-07-2022 | 23:58:23.870 [main] DEBUG i.e.s.core.InternalConfigXmlRead - Classpath search mappings[0] searchTime[0]
+08-07-2022 | 23:58:23.888 [main] DEBUG i.e.s.deploy.BeanDescriptorManager - BeanPersistControllers[0] BeanFinders[0] BeanPersistListeners[0] BeanQueryAdapters[0] BeanPostLoaders[0] BeanPostConstructors[0]
+08-07-2022 | 23:58:24.022 [main] DEBUG i.e.s.deploy.BeanDescriptorManager - Entities[9]
+08-07-2022 | 23:58:24.065 [main] DEBUG i.e.dbmigration.DbOffline - reset
+08-07-2022 | 23:58:24.183 [main] DEBUG spark.route.Routes - Adds route: after, +/*paths, spark.FilterImpl$1@592e843a
+08-07-2022 | 23:58:24.185 [main] DEBUG spark.route.Routes - Adds route: before, /spring-leaf/*, spark.FilterImpl$1@4ebea12c
+08-07-2022 | 23:58:24.314 [Thread-3] INFO  s.e.jetty.EmbeddedJettyServer - == Spark has ignited ...
+08-07-2022 | 23:58:24.315 [Thread-3] INFO  s.e.jetty.EmbeddedJettyServer - >> Listening on 0.0.0.0:3357
+08-07-2022 | 23:58:24.409 [main] INFO  org.reflections.Reflections - Reflections took 172 ms to scan 1 urls, producing 4 keys and 53 values
+08-07-2022 | 23:58:24.468 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/subject/get, spark.RouteImpl$1@5af9926a
+08-07-2022 | 23:58:24.468 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/post/get-posts, spark.RouteImpl$1@43c67247
+08-07-2022 | 23:58:24.469 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/register, spark.RouteImpl$1@726386ed
+08-07-2022 | 23:58:24.469 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/topic/get-post, spark.RouteImpl$1@649f2009
+08-07-2022 | 23:58:24.469 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/topic/get-post-by-subject, spark.RouteImpl$1@14bb2297
+08-07-2022 | 23:58:24.469 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/verifymail, spark.RouteImpl$1@69adf72c
+08-07-2022 | 23:58:24.469 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/subject-cached, spark.RouteImpl$1@797501a
+08-07-2022 | 23:58:24.469 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/subject/find, spark.RouteImpl$1@1a15b789
+08-07-2022 | 23:58:24.470 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/login, spark.RouteImpl$1@57f791c6
+08-07-2022 | 23:58:24.470 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/subject/all, spark.RouteImpl$1@51650883
+08-07-2022 | 23:58:24.470 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/post/get, spark.RouteImpl$1@6c4f9535
+08-07-2022 | 23:58:24.470 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/user/info, spark.RouteImpl$1@5bd1ceca
+08-07-2022 | 23:58:24.471 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/user/logout, spark.RouteImpl$1@30c31dd7
+08-07-2022 | 23:58:24.471 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/post/user-post, spark.RouteImpl$1@499b2a5c
+08-07-2022 | 23:58:24.471 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/post/create-post, spark.RouteImpl$1@596df867
+08-07-2022 | 23:58:24.472 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/change-password, spark.RouteImpl$1@241a53ef
+08-07-2022 | 23:58:24.472 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/test, spark.RouteImpl$1@344344fa
+08-07-2022 | 23:58:24.473 [main] DEBUG spark.route.Routes - Adds route: delete, /spring-leaf/post/archive, spark.RouteImpl$1@70e659aa
+08-07-2022 | 23:58:24.476 [main] DEBUG spark.route.Routes - Adds route: delete, /spring-leaf/comment/delete, spark.RouteImpl$1@615f972
+08-07-2022 | 23:58:24.476 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/change-info, spark.RouteImpl$1@285f09de
+08-07-2022 | 23:58:24.476 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/vote-post, spark.RouteImpl$1@73393584
+08-07-2022 | 23:58:24.477 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/subject/create, spark.RouteImpl$1@31500940
+08-07-2022 | 23:58:24.478 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/comment/add, spark.RouteImpl$1@1827a871
+08-07-2022 | 23:58:24.478 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/topic/add, spark.RouteImpl$1@48e64352
+08-07-2022 | 23:58:24.479 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/subject/vote, spark.RouteImpl$1@7249dadf
+08-07-2022 | 23:58:24.488 [Thread-12] DEBUG com.springleaf.App$CacheService - Checking new Subject at Fri Jul 08 23:58:24 ICT 2022
+08-07-2022 | 23:58:43.538 [qtp457463363-26] INFO  spark.http.matching.MatcherFilter - The requested route [/spring-leaf/user/info] has not been mapped in Spark for Accept: [*/*]
+08-07-2022 | 23:58:44.355 [qtp457463363-23] INFO  spark.http.matching.MatcherFilter - The requested route [/spring-leaf/user/info] has not been mapped in Spark for Accept: [*/*]
+08-07-2022 | 23:58:44.492 [Thread-12] DEBUG com.springleaf.App$CacheService - Checking new Subject at Fri Jul 08 23:58:44 ICT 2022
+08-07-2022 | 23:58:44.794 [qtp457463363-26] INFO  spark.http.matching.MatcherFilter - The requested route [/spring-leaf/user/info] has not been mapped in Spark for Accept: [*/*]
+08-07-2022 | 23:58:44.981 [qtp457463363-23] INFO  spark.http.matching.MatcherFilter - The requested route [/spring-leaf/user/info] has not been mapped in Spark for Accept: [*/*]
+08-07-2022 | 23:58:45.170 [qtp457463363-26] INFO  spark.http.matching.MatcherFilter - The requested route [/spring-leaf/user/info] has not been mapped in Spark for Accept: [*/*]
+08-07-2022 | 23:58:45.354 [qtp457463363-23] INFO  spark.http.matching.MatcherFilter - The requested route [/spring-leaf/user/info] has not been mapped in Spark for Accept: [*/*]
+08-07-2022 | 23:59:04.492 [Thread-12] DEBUG com.springleaf.App$CacheService - Checking new Subject at Fri Jul 08 23:59:04 ICT 2022
+08-07-2022 | 23:59:24.497 [Thread-12] DEBUG com.springleaf.App$CacheService - Checking new Subject at Fri Jul 08 23:59:24 ICT 2022
+08-07-2022 | 23:59:44.511 [Thread-12] DEBUG com.springleaf.App$CacheService - Checking new Subject at Fri Jul 08 23:59:44 ICT 2022
+08-07-2022 | 23:59:46.261 [Thread-1] DEBUG i.e.server.lib.ShutdownManager - Shutting down
+08-07-2022 | 23:59:46.261 [Thread-1] DEBUG i.e.server.core.DefaultServer - Shutting down instance:db
+08-07-2022 | 23:59:46.262 [Thread-1] DEBUG i.e.server.lib.DaemonExecutorService - DaemonExecutorService[ebean-db] shutting down...
+08-07-2022 | 23:59:46.262 [Thread-1] DEBUG i.e.s.lib.DaemonScheduleThreadPool - DaemonScheduleThreadPool ebean-db-periodic- shutting down...
+08-07-2022 | 23:59:46.263 [Thread-1] DEBUG i.e.d.pool.PooledConnectionQueue - DataSourcePool [db] shutdown min[2] max[50] free[2] busy[0] waiting[0] highWaterMark[1] waitCount[0] hitCount[4] - Statistics count[4] errors[0] totalMicros[15643] hwmMicros[5869] avgMicros[3910]
+08-07-2022 | 23:59:46.263 [Thread-1] DEBUG i.e.d.pool.FreeConnectionBuffer - ... closing all 2 connections from the free list with logErrors: true
+08-07-2022 | 23:59:46.263 [Thread-1] DEBUG i.e.datasource.pool.PooledConnection - Closing Connection[db1] slot[3] reason[null] stats: count[4] errors[0] totalMicros[15643] hwmMicros[5869] avgMicros[3910] , pstmtStats: size[0] max[20] hits[0] miss[0] hitRatio[0] removes[0] 
+08-07-2022 | 23:59:46.269 [Thread-1] DEBUG i.e.datasource.pool.PooledConnection - Closing Connection[db0] slot[0] reason[null] stats: count[0] errors[0] totalMicros[0] hwmMicros[0] avgMicros[0] , pstmtStats: size[0] max[20] hits[0] miss[0] hitRatio[0] removes[0] 
+08-07-2022 | 23:59:49.956 [main] DEBUG c.s.database.sql.SQLDatabase - Setting up MySQL database
+08-07-2022 | 23:59:50.030 [main] INFO  io.ebean.EbeanVersion - ebean version: 12.1.8
+08-07-2022 | 23:59:50.128 [main] INFO  i.e.config.properties.LoadContext - loaded properties from []
+08-07-2022 | 23:59:50.143 [main] DEBUG i.a.c.s.i.s.c.ClassPathScanner - determining location urls for classpath:com/springleaf/object/entity using ClassLoader sun.misc.Launcher$AppClassLoader@18b4aac2 ...
+08-07-2022 | 23:59:50.143 [main] DEBUG i.a.c.s.i.s.c.ClassPathScanner - scanning URL: file:/D:/Project/spring-leaf-backend/target/classes/com/springleaf/object/entity
+08-07-2022 | 23:59:50.145 [main] DEBUG i.a.c.s.i.s.c.FileSystemClassPathLocationScanner - Scanning starting at classpath root in filesystem: D:\Project\spring-leaf-backend\target\classes\
+08-07-2022 | 23:59:50.145 [main] DEBUG i.a.c.s.i.s.c.FileSystemClassPathLocationScanner - Scanning for resources in path: D:\Project\spring-leaf-backend\target\classes\com\springleaf\object\entity (com/springleaf/object/entity)
+08-07-2022 | 23:59:50.146 [main] DEBUG i.a.c.s.i.s.c.FileSystemClassPathLocationScanner - Scanning for resources in path: D:\Project\spring-leaf-backend\target\classes\com\springleaf\object\entity\types (com/springleaf/object/entity)
+08-07-2022 | 23:59:50.147 [main] DEBUG i.a.c.s.i.s.c.ClassPathScanner - scanning for classes at classpath:com/springleaf/object/entity found 13 resources to check
+08-07-2022 | 23:59:50.210 [main] DEBUG i.e.s.c.bootup.BootupClassPathSearch - Classpath search entities[9] searchTime[67] in packages[[com.springleaf.object.entity]]
+08-07-2022 | 23:59:50.280 [main] INFO  i.e.datasource.pool.ConnectionPool - DataSourcePool [db] autoCommit[false] transIsolation[READ_COMMITTED] min[2] max[50]
+08-07-2022 | 23:59:51.110 [main] INFO  io.ebean.internal.DefaultContainer - DatabasePlatform name:db platform:mysql
+08-07-2022 | 23:59:51.274 [main] DEBUG i.e.server.type.DefaultTypeManager - Registering java.time data types
+08-07-2022 | 23:59:51.288 [main] DEBUG i.e.s.core.InternalConfigXmlRead - Classpath search mappings[0] searchTime[0]
+08-07-2022 | 23:59:51.305 [main] DEBUG i.e.s.deploy.BeanDescriptorManager - BeanPersistControllers[0] BeanFinders[0] BeanPersistListeners[0] BeanQueryAdapters[0] BeanPostLoaders[0] BeanPostConstructors[0]
+08-07-2022 | 23:59:51.426 [main] DEBUG i.e.s.deploy.BeanDescriptorManager - Entities[9]
+08-07-2022 | 23:59:51.454 [main] DEBUG i.e.dbmigration.DbOffline - reset
+08-07-2022 | 23:59:51.539 [main] DEBUG spark.route.Routes - Adds route: after, +/*paths, spark.FilterImpl$1@592e843a
+08-07-2022 | 23:59:51.541 [main] DEBUG spark.route.Routes - Adds route: before, /spring-leaf/*, spark.FilterImpl$1@4ebea12c
+08-07-2022 | 23:59:51.651 [Thread-3] INFO  s.e.jetty.EmbeddedJettyServer - == Spark has ignited ...
+08-07-2022 | 23:59:51.652 [Thread-3] INFO  s.e.jetty.EmbeddedJettyServer - >> Listening on 0.0.0.0:3357
+08-07-2022 | 23:59:51.736 [main] INFO  org.reflections.Reflections - Reflections took 162 ms to scan 1 urls, producing 4 keys and 53 values
+08-07-2022 | 23:59:51.794 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/subject/get, spark.RouteImpl$1@5af9926a
+08-07-2022 | 23:59:51.794 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/post/get-posts, spark.RouteImpl$1@43c67247
+08-07-2022 | 23:59:51.794 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/register, spark.RouteImpl$1@726386ed
+08-07-2022 | 23:59:51.795 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/topic/get-post, spark.RouteImpl$1@649f2009
+08-07-2022 | 23:59:51.795 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/topic/get-post-by-subject, spark.RouteImpl$1@14bb2297
+08-07-2022 | 23:59:51.795 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/verifymail, spark.RouteImpl$1@69adf72c
+08-07-2022 | 23:59:51.795 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/subject-cached, spark.RouteImpl$1@797501a
+08-07-2022 | 23:59:51.795 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/subject/find, spark.RouteImpl$1@1a15b789
+08-07-2022 | 23:59:51.795 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/login, spark.RouteImpl$1@57f791c6
+08-07-2022 | 23:59:51.795 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/subject/all, spark.RouteImpl$1@51650883
+08-07-2022 | 23:59:51.795 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/post/get, spark.RouteImpl$1@6c4f9535
+08-07-2022 | 23:59:51.796 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/user/info, spark.RouteImpl$1@5bd1ceca
+08-07-2022 | 23:59:51.796 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/user/logout, spark.RouteImpl$1@30c31dd7
+08-07-2022 | 23:59:51.796 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/post/user-post, spark.RouteImpl$1@499b2a5c
+08-07-2022 | 23:59:51.796 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/post/create-post, spark.RouteImpl$1@596df867
+08-07-2022 | 23:59:51.797 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/change-password, spark.RouteImpl$1@241a53ef
+08-07-2022 | 23:59:51.797 [main] DEBUG spark.route.Routes - Adds route: get, /spring-leaf/test, spark.RouteImpl$1@344344fa
+08-07-2022 | 23:59:51.798 [main] DEBUG spark.route.Routes - Adds route: delete, /spring-leaf/post/archive, spark.RouteImpl$1@70e659aa
+08-07-2022 | 23:59:51.798 [main] DEBUG spark.route.Routes - Adds route: delete, /spring-leaf/comment/delete, spark.RouteImpl$1@615f972
+08-07-2022 | 23:59:51.798 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/change-info, spark.RouteImpl$1@285f09de
+08-07-2022 | 23:59:51.798 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/user/vote-post, spark.RouteImpl$1@73393584
+08-07-2022 | 23:59:51.798 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/subject/create, spark.RouteImpl$1@31500940
+08-07-2022 | 23:59:51.798 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/comment/add, spark.RouteImpl$1@1827a871
+08-07-2022 | 23:59:51.799 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/topic/add, spark.RouteImpl$1@48e64352
+08-07-2022 | 23:59:51.799 [main] DEBUG spark.route.Routes - Adds route: post, /spring-leaf/subject/vote, spark.RouteImpl$1@7249dadf
+08-07-2022 | 23:59:51.806 [Thread-12] DEBUG com.springleaf.App$CacheService - Checking new Subject at Fri Jul 08 23:59:51 ICT 2022
