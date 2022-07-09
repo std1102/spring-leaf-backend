@@ -52,7 +52,11 @@ public class Router {
                         return "OKE";
                     });
             before("/*", (request, response) -> {
-//                response.header("Access-Control-Allow-Origin", InetAddress.getLocalHost().getHostAddress());
+                response.header("Access-Control-Allow-Origin", InetAddress.getLocalHost().getHostAddress());
+            });
+        }
+        else {
+            before("/*", (request, response) -> {
                 response.header("Access-Control-Allow-Origin", "*");
             });
         }
