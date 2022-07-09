@@ -32,26 +32,24 @@ public class ChangeInfo extends UserContext{
             result.put("New email", email);
             userRecord.setEmail(email);
         }
-        else if (!$.isEmpty(first_name)) {
+        if (!$.isEmpty(first_name)) {
             result.put("New frist name", first_name);
             userRecord.setFirst_name(first_name);
         }
-        else if (!$.isMultipleEmpty(last_name)) {
+        if (!$.isMultipleEmpty(last_name)) {
             result.put("New last name", last_name);
             userRecord.setLast_name(last_name);
         }
-        else if (!$.isEmpty(dob)) {
+        if (!$.isEmpty(dob)) {
             Date actualDob = new SimpleDateFormat("yyyy-MM-dd").parse(dob);
             result.put("New DOB", dob);
             userRecord.setDob(actualDob);
         }
-        else if (!$.isEmpty(bio)) {
+        if (!$.isEmpty(bio)) {
             result.put("New bio", "updated");
             userRecord.setBiography(bio);
         }
-        else {
-            return result();
-        }
+        userRecord.save();
         return result();
     }
 }
