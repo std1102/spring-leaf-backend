@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.Map;
 
-@RequestMapping(path = "/subject/create", type = RequestType.POST)
+@RequestMapping(path = "/subject/create-cache", type = RequestType.POST)
 public class CreateSubject extends UserContext {
     @Override
     protected Object _process(Map<String, Object> map) throws IOException, ParseException {

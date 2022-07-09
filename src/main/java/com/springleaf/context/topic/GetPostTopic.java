@@ -7,6 +7,7 @@ import com.springleaf.context.Context;
 import com.springleaf.object.entity.Post;
 import com.springleaf.object.entity.Subject;
 import com.springleaf.object.entity.Topic;
+import com.springleaf.object.entity.User;
 import io.ebean.Ebean;
 
 import javax.mail.MessagingException;
@@ -28,7 +29,11 @@ public class GetPostTopic extends Context {
         }
         if (topic.getPosts() != null) {
             for (Post post : topic.getPosts()) {
-                post.setUser(null);
+                User user = post.getUser();
+                post.setUser(new User());
+                post.getUser().setId(user.getId());
+                post.getUser().setFirst_name(user.getFirst_name());
+                post.getUser().setLast_name(user.getLast_name());
                 post.setComments(null);
                 post.setLanguage(null);
                 post.setTopic(null);
