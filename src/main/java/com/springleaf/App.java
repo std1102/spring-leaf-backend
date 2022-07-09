@@ -10,7 +10,7 @@ import com.springleaf.object.entity.Post;
 import com.springleaf.object.entity.Subject;
 import com.springleaf.object.entity.types.VoteType;
 import com.springleaf.rest.Router;
-import javafx.geometry.Pos;
+
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Date;

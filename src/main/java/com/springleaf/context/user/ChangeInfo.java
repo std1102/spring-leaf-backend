@@ -19,6 +19,7 @@ public class ChangeInfo extends UserContext{
     private String LAST_NAME = "last_name";
     private String DOB = "dob";
     private String BIO = "bio";
+    private String AVATAR = "avatar";
 
     @Override
     @Transactional
@@ -28,6 +29,7 @@ public class ChangeInfo extends UserContext{
         String dob = (String) map.get(DOB);
         String last_name = (String) map.get(LAST_NAME);
         String bio = (String) map.get(BIO);
+        String avatar = (String) map.get(AVATAR);
         if (!$.isEmpty(email)) {
             result.put("New email", email);
             userRecord.setEmail(email);
@@ -48,6 +50,10 @@ public class ChangeInfo extends UserContext{
         if (!$.isEmpty(bio)) {
             result.put("New bio", "updated");
             userRecord.setBiography(bio);
+        }
+        if (!$.isEmpty(avatar)) {
+            result.put("New avatar", "updated");
+            userRecord.setAvatar(avatar);
         }
         userRecord.save();
         return result();

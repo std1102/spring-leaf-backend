@@ -10,7 +10,6 @@ import com.springleaf.object.entity.Post;
 import com.springleaf.object.entity.User;
 import com.springleaf.object.entity.Vote;
 import io.ebean.Ebean;
-import javafx.geometry.Pos;
 
 import javax.mail.MessagingException;
 import java.io.IOException;

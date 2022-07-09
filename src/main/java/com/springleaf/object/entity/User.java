@@ -37,6 +37,8 @@ public class User extends Model {
     @Column(nullable = true)
     String biography;
 
+    String avatar = "https://icon-library.com/images/human-icon-png/human-icon-png-11.jpg";
+
     @Enumerated(EnumType.STRING)
     UserStatus status;
 

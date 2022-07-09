@@ -8,7 +8,6 @@ import com.springleaf.context.user.UserContext;
 import com.springleaf.object.entity.Comment;
 import com.springleaf.object.entity.Post;
 import io.ebean.Ebean;
-import javafx.geometry.Pos;
 
 import java.io.IOException;
 import java.text.ParseException;
