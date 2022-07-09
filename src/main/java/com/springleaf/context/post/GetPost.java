@@ -32,7 +32,10 @@ public class GetPost extends Context {
             return error(ErrorCode.POST_NOT_FOUND);
         }
         for (Vote voz : post.getVotes()) {
-            voz.setUser(null);
+            User temp = voz.getUser();
+            voz.setUser(new User());
+            voz.getUser().setId(temp.getId());
+            voz.getUser().setAvatar(null);
             voz.setPost(null);
         }
         for (Comment comment : post.getComments()) {
@@ -44,6 +47,7 @@ public class GetPost extends Context {
             comment.getUser().setEmail(null);
             comment.getUser().setActive(null);
             comment.getUser().setStatus(null);
+            comment.getUser().setAvatar(null);
             comment.setPost(null);
         }
         result.put("post", post);

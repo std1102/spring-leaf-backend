@@ -8,6 +8,7 @@ import com.springleaf.context.Context;
 import com.springleaf.database.DataCache;
 import com.springleaf.database.DataSourceHandle;
 import com.springleaf.object.entity.Comment;
+import com.springleaf.object.entity.User;
 import com.springleaf.object.entity.Vote;
 import io.ebean.Ebean;
 import lombok.extern.slf4j.Slf4j;
@@ -45,7 +46,10 @@ public class GetNewPost extends Context {
                 post.setContent(post.getContent().substring(0, 100));
             }
             for (Vote voz : post.getVotes()) {
-                voz.setUser(null);
+                User temp = voz.getUser();
+                voz.setUser(new User());
+                voz.getUser().setId(temp.getId());
+                voz.getUser().setAvatar(null);
                 voz.setPost(null);
             }
             for (Comment comment : post.getComments()) {

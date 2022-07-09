@@ -32,7 +32,7 @@ public class SearchTopic extends Context {
             return error(ErrorCode.TOPIC_NOT_FOUND);
         }
         for (Topic topic : topics) {
-            topic.setSubject(null);
+            topic.getSubject().setTopics(null);
             topic.setPosts(null);
         }
         result.put("topics", topics);
