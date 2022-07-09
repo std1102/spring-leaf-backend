@@ -46,19 +46,18 @@ public class VotePost extends UserContext{
             vote.save();
         }
         else {
-            for (Iterator<Vote> iterator = post.getVotes().iterator(); iterator.hasNext();) {
-                Vote voz = iterator.next();
+            for (Vote voz : post.getVotes()) {
                 if (voz.getUser().getId().equals(user.getId())) {
                     if (voz.getType().equals(VoteType.valueOf(vote_type))) {
                         return error(ErrorCode.ACTION_DENIED);
                     }
                     else {
+                        post.getVotes().remove(voz);
+                        post.getVotes().add(voz);
+                        post.save();
                         voz.setType(VoteType.valueOf(vote_type));
                         voz.setPost(post);
                         voz.save();
-                        iterator.remove();
-                        post.getVotes().add(voz);
-                        post.save();
                     };
                 }
             }
